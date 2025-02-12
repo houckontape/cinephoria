@@ -1,0 +1,57 @@
+/* Styles globaux */
+
+
+.navbar {
+  position: fixed;
+  top: 5%;
+  left: 10%; /* Centrer horizontalement avec 80% */
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 136, 0, 0.64); /* Légèrement transparent */
+  color: white;
+  padding: 0 20px;
+  border-radius: 8px;
+  z-index: 1000; /* Toujours au-dessus */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-logo img {
+  height: 40px; /* Ajuste la hauteur du logo à votre besoin */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu a,
+.navbar-login a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover,
+.navbar-login a:hover {
+  color: #00bcd4; /* Couleur d'accentuation au survol */
+}
+
+.navbar-login a {
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.navbar-login a:hover {
+  background-color: #00bcd4;
+  color: black;
+}
+
+.active {
+  border-bottom: 2px solid #00bcd4; /* Active link indication */
+}

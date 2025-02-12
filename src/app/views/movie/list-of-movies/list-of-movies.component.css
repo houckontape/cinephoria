@@ -1,0 +1,17 @@
+.movies-flex {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne pour éviter l'écrasement */
+  gap: 10px; /* Espacement entre les éléments */
+  justify-content: space-between; /* Gère l'espacement horizontal */
+}
+
+.movies-flex app-movie-card {
+  flex: 0 1 calc(33.33% - 20px); /* Largeur maximale d'un tiers de la ligne - espacement */
+  box-sizing: border-box; /* Inclure les marges/paddings dans le calcul */
+}
+
+h2 {
+  text-align: center;
+}
+
+

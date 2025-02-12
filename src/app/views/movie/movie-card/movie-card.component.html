@@ -1,0 +1,7 @@
+
+<div class="movie-card">
+  <h1 class="movie-title">{{movie.title}}</h1>
+  <img src="{{movie.poster}}" alt="Image principale du film" class="movie-image">
+  <p class="movie-synopsis">{{movie.synopsis | slice:0:200}}...</p>
+  <a routerLink="/movies/{{movie.id}}">Plus de détails</a>
+</div>

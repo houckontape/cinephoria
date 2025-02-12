@@ -1,0 +1,8 @@
+main {
+  /*border: 1px solid red;*/
+  margin-top: 8%;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;    /* Centre verticalement */
+  min-height: 100vh;      /* Assure que le conteneur occupe toute la hauteur de l'écran */
+}
