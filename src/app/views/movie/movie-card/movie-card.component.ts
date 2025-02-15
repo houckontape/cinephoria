@@ -1,13 +1,14 @@
 import {Component, Input} from '@angular/core';
 import {Movies} from '../../../core/model/movies';
-import {SlicePipe} from '@angular/common';
+import {NgIf, SlicePipe} from '@angular/common';
 import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-movie-card',
   imports: [
     SlicePipe,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.css'

@@ -1,6 +1,8 @@
 .movie-card {
+  position: relative;
+
   width: 100%; /* Largeur de la carte */
-  max-width: 600px; /* Largeur maximale pour limiter la taille */
+  max-width: 300px; /* Largeur maximale pour limiter la taille */
   margin: 20px auto; /* Centre la carte horizontalement */
   padding: 15px;
   background-color: #f9f9f9; /* Couleur de fond douce */
@@ -18,7 +20,7 @@
 
 .movie-image {
   width: 100%; /* Image responsive */
-  max-width: 500px; /* Limite la largeur de l'image */
+  max-width: 250px; /* Limite la largeur de l'image */
   height: auto;
   border-radius: 5px; /* Coin légèrement arrondi */
   margin-bottom: 15px;
@@ -29,4 +31,13 @@
   color: #555;
   line-height: 1.5;
   text-align: justify;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  color: red;
+  font-size: 36px;
+  z-index: 10;
 }

@@ -1,6 +1,7 @@
 main {
   /*border: 1px solid red;*/
-  margin-top: 8%;
+  margin: 8%;
+
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center;    /* Centre verticalement */
