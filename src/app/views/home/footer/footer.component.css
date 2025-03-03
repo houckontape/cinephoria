@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #3e3c3c; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 10px;
+  position: sticky;
+  bottom: 0; /* Fixé au bas de la page */
+  border-radius: 8px 8px 0 0;
+  left: 10%;
+  height: 10%;
+  width: 80%;
+  z-index: 100; /* Rester au-dessus des autres éléments */
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px; /* Espacement entre les sections */
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px; /* Texte compact */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}

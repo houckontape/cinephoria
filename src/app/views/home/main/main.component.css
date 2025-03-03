@@ -7,3 +7,40 @@ main {
   align-items: center;    /* Centre verticalement */
   min-height: 100vh;      /* Assure que le conteneur occupe toute la hauteur de l'écran */
 }
+/* Rideau à gauche */
+.side-curtain.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5%; /* 5% de la largeur de l'écran */
+  height: 100%; /* Prend toute la hauteur */
+  background: linear-gradient(to right, #7b1b1b, #a02626); /* Effet de rideau */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre pour plus de réalisme */
+  z-index: 1000; /* Passe au-dessus du contenu */
+}
+
+/* Rideau à droite */
+.side-curtain.right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5%; /* 5% de la largeur de l'écran */
+  height: 100%; /* Prend toute la hauteur */
+  background: linear-gradient(to left, #7b1b1b, #a02626); /* Effet inversé */
+  /*background: url('https://www.google.com/imgres?q=rideau%20theatre%20png&imgurl=https%3A%2F%2Fimg.freepik.com%2Fvecteurs-libre%2Ffond-rideau-soie-rouge_1048-11014.jpg&imgrefurl=https%3A%2F%2Ffr.freepik.com%2Fphotos-vecteurs-libre%2Frideau-theatre&docid=KU1jQqzdOK3ffM&tbnid=iakcfRIRPBi63M&vet=12ahUKEwjn94z2h-SLAxWfVaQEHe3aHRgQM3oECHEQAA..i&w=626&h=626&hcb=2&ved=2ahUKEwjn94z2h-SLAxWfVaQEHe3aHRgQM3oECHEQAA') no-repeat center center;*/
+  background-size: cover;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Contenu principal */
+.content {
+  margin: 0 auto;
+  width: 90%; /* Le contenu reste centré */
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  position: relative;
+  z-index: 10; /* Passe au-dessus pour rester visible */
+}

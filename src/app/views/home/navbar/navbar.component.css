@@ -6,16 +6,16 @@
   top: 5%;
   left: 10%; /* Centrer horizontalement avec 80% */
   width: 80%;
-  height: 60px;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 136, 0, 0.64); /* Légèrement transparent */
+  background-color: #404240; /* Légèrement transparent */
   color: white;
   padding: 0 20px;
   border-radius: 8px;
   z-index: 1000; /* Toujours au-dessus */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(64, 62, 62, 0.5);
 }
 
 .navbar-logo img {
