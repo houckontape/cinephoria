@@ -1,2 +1,17 @@
-<p>movies-details works!</p>
-{{movies?.title}}
+<H1>{{movies?.title}}</H1>
+<h2 *ngIf=movies?.weLike> Notre coupe de coeur</h2>
+<h2></h2>
+<div class="container">
+  <div class="image-container">
+    <img src="{{movies?.poster}}" alt="Movie Image" />
+  </div>
+  <div class="content-container">
+    <h2>{{ movies?.title }}</h2>
+    <p>{{ movies?.synopsis }}</p>
+    <ul>
+      <li>durée: {{movies?.duration}} minutes</li>
+      <li>genre: {{movies?.genre}}</li>
+      <li>note : {{movies?.note}}/5</li>
+    </ul>
+  </div>
+</div>
