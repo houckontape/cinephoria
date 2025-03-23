@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #3e3c3c; /* Couleur de fond */
-  color: #fff; /* Couleur du texte */
+  background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond */
+  color:black; /* Couleur du texte */
   padding: 10px;
-  position: sticky;
+
   bottom: 0; /* Fixé au bas de la page */
   border-radius: 8px 8px 0 0;
   left: 10%;
@@ -37,3 +37,4 @@
 .footer-section ul li {
   margin-bottom: 5px;
 }
+

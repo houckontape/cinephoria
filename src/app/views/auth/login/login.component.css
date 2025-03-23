@@ -1,0 +1,17 @@
+.login-container{
+  text-align: center;
+  font-size: 1.5em;
+}
+input {
+  margin-left: 10px;
+  width: 200px;
+  height: 30px;
+}
+.login-title{
+  text-align: center;
+}
+.login-subtitle{
+  text-align: center;
+}
+
+

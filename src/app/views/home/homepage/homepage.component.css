@@ -13,5 +13,13 @@
 h2 {
   text-align: center;
 }
-
+.home-presentation {
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  background-image: url("https://img.youtube.com/vi/BoQRfa0aw00/maxresdefault.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 

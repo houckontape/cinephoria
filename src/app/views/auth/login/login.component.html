@@ -1,1 +1,37 @@
-<p>login works!</p>
+         <div class="login-container">
+          <div class="login-title">
+            <h2>Content de vous revoir sur {{ title }}!</h2>
+            <p class="login-subtitle">
+              Veuillez vous connecter pour continuer
+            </p>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="userEmail" class="form-label" >Email</label>
+              <input class="form-control form-control-lg"
+                     type="email"
+                     id="userEmail"
+                     formControlName="userEmail"
+                     required placeholder="Enter your email"
+                     [ngClass]="{'is-invalid': loginForm.get('userEmail')?.invalid && loginForm.get('userEmail')?.touched}"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="userPassword" class="form-label">Mot de Passe</label>
+              <input class="form-control form-control-lg"
+                     type="password"
+                     id="userPassword"
+                     formControlName="userPassword"
+                     required placeholder="Enter password"
+                     [ngClass]="{'is-invalid': loginForm.get('userPassword')?.invalid && loginForm.get('userPassword')?.touched}"
+              /></div>
+            <div>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+              <button type="submit" >Connexion</button>
+            </div>
+          </form>
+         </div>
+         <div class="text-center mb-3">Pas encore de compte?
+           <a routerLink="/register" routerLinkActive="active" >Creation de compte</a>
+         </div>
