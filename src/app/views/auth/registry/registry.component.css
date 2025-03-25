@@ -1,0 +1,18 @@
+.error{
+  background-color: #f33636;
+}
+.success{
+  background-color: #47f547;
+}
+/* Surligne les champs invalides avec un contour rouge */
+.is-invalid {
+  border: 2px solid red;
+  outline: none;
+}
+
+/* Affiche les messages d'erreur en rouge */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

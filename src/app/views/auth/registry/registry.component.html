@@ -1,2 +1,86 @@
-<label for="registryUser">Name: </label>
-<input id="registryUser" type="text" [formControl]="registryUser">
+<main class="d-flex w-100">
+  <div class="container d-flex flex-column">
+    <div class="row vh-100">
+      <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
+        <div class="d-table-cell align-middle">
+
+          <div class="text-center mt-4">
+            <h1 class="h2">Inscription à Cinephoria</h1>
+            <p class="lead">
+              Rejoignez notre communauté et profitez pleinement de l'expérience.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="m-sm-3">
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Nom</label>
+                    <input class="form-control form-control-lg"
+                           type="text" id="username"
+                           formControlName="username"
+                           required  placeholder="Enter your name"
+                           [ngClass]="{'is-invalid': signupForm.get('username')?.invalid && signupForm.get('username')?.touched}"
+
+                    />
+                    <div *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched" class="error-message">
+                      Nom d'utilisateur requis.
+                    </div>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="userEmail" class="form-label" >Email</label>
+                    <input class="form-control form-control-lg"
+                           type="email"
+                           id="userEmail"
+                           formControlName="userEmail"
+                           required placeholder="Enter your email"
+                           [ngClass]="{'is-invalid': signupForm.get('userEmail')?.invalid && signupForm.get('userEmail')?.touched}"
+                    />
+                    <div *ngIf="signupForm.get('userEmail')?.hasError('required') && signupForm.get('userEmail')?.touched" class="error-message">
+                      Adresse email obligatoire.
+                    </div>
+                    <div *ngIf="signupForm.get('userEmail')?.hasError('email') && signupForm.get('userEmail')?.touched" class="error-message">
+                      Format d'email invalide.
+                    </div>
+                    <div *ngIf="signupForm.get('userEmail')?.hasError('emailTaken')" class="error-message">
+                      Cet e-mail est déjà utilisé.
+                    </div>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="userPassword" class="form-label">Mot de Passe</label>
+                    <input class="form-control form-control-lg"
+                           type="password"
+                           id="userPassword"
+                           formControlName="userPassword"
+                           required placeholder="Enter password"
+                           [ngClass]="{'is-invalid': signupForm.get('userPassword')?.invalid && signupForm.get('userPassword')?.touched}"
+                    />
+                  </div>
+                  <div *ngIf="signupForm.get('userPassword')?.hasError('required') && signupForm.get('userPassword')?.touched" class="error-message">
+                    Mot de passe requis.
+                  </div>
+                  <div *ngIf="signupForm.get('userPassword')?.hasError('minlength') && signupForm.get('userPassword')?.touched" class="error-message">
+                    Le mot de passe doit contenir au moins 6 caractères.
+                  </div>
+                  <div class="d-grid gap-2 mt-3">
+                    <button type="submit">S'inscrire</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mb-3">
+            Déjà inscrit?<a routerLink="/login" routerLinkActive="active" >Connexion</a>
+          </div>
+          <div class="success" *ngIf="successMessage"> {{successMessage}} </div>
+          <div class="error"  *ngIf="AlertMessage"> {{AlertMessage}} </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

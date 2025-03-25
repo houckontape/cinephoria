@@ -1,2 +1,52 @@
-<p>dashboard works!</p>
+<div class="container mt-5">
+  <h1 class="text-center">Tableau de Bord Cinéma</h1>
 
+  <!-- Section des statistiques globales -->
+  <div class="row my-4">
+    <div class="col-md-4">
+      <div class="card text-white bg-primary">
+        <div class="card-body text-center">
+          <h5 class="card-title">Visiteurs Aujourd'hui</h5>
+          <p class="card-text display-4">{{ totalVisiteurs }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-danger">
+        <div class="card-body text-center">
+          <h5 class="card-title">Salles avec Incidents</h5>
+          <p class="card-text display-4">{{ sallesIncidents }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-success">
+        <div class="card-body text-center">
+          <h5 class="card-title">Tickets Vendus</h5>
+          <p class="card-text display-4">{{ totalVentes }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section du tableau des ventes -->
+  <div class="my-4">
+    <h2>Tableau des Ventes</h2>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Salle</th>
+        <th>Tickets Vendus</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let salle of tableauVentes">
+        <td>{{ salle.nom }}</td>
+        <td>{{ salle.ticketsVendus }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
