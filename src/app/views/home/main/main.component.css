@@ -5,7 +5,7 @@ main {
   justify-content: center; /* Centre horizontalement */
   align-items: center;    /* Centre verticalement */
   min-height: 100vh;      /* Assure que le conteneur occupe toute la hauteur de l'écran */
-
+  display: flex;
 }
 
 

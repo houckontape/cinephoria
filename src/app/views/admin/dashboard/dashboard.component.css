@@ -1,0 +1,18 @@
+/* on s assure que le containner principal du
+dashboard prenne tout l ecran */
+.container {
+  display: flex;
+  gap: 10px; /* Espacement entre les éléments */
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Définit la barre latérale sur le côté gauche */
+.dashboard-sidebar {
+  width: 30%; /* Largeur de la barre latérale */
+  height: 100%; /* Prend la hauteur complète du parent (container) */
+  background-color: #f4f4f4; /* Couleur de fond */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+

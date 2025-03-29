@@ -1,10 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForOf} from '@angular/common';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   imports: [
-    NgForOf
+    NgForOf,
+    RouterLink,
+    RouterOutlet,
+    RouterLinkActive
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
@@ -14,10 +18,7 @@ totalVisiteurs: number =0;
 sallesIncidents: number =0;
 totalVentes:number =0;
 
-tableauVentes: {
-  nom:string;
-  ticketsVendus:number;
-}[]=[];
+
 
 // Donnes pour le tableau
   chartLabels:string[]=[];
@@ -42,16 +43,10 @@ tableauVentes: {
     this.sallesIncidents = 3;
     this.totalVentes = 850;
 
-    this.tableauVentes = [
-      { nom: 'Salle 1', ticketsVendus: 300 },
-      { nom: 'Salle 2', ticketsVendus: 250 },
-      { nom: 'Salle 3', ticketsVendus: 150 },
-      { nom: 'Salle 4', ticketsVendus: 150 },
-    ];
+
 
     // Préparer les données des graphiques
-    this.chartLabels = this.tableauVentes.map(salle => salle.nom);
-    this.chartData[0].data = this.tableauVentes.map(salle => salle.ticketsVendus);
+
 
   }
 }
