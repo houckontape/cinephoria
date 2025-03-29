@@ -12,6 +12,7 @@ import {ProfilComponent} from './views/user/profil/profil.component';
 import {DashboardComponent} from './views/admin/dashboard/dashboard.component';
 import {ManageRoomComponent} from './views/admin/manage-room/manage-room.component';
 import {ManageSessionComponent} from './views/admin/manage-session/manage-session.component';
+import {ManageMoviesComponent} from './views/admin/manage-movies/manage-movies.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ export const routes: Routes = [
   children: [
 
               {path: 'manageRoom', component: ManageRoomComponent},
+              {path: 'manageMovie', component: ManageMoviesComponent},
               {path: 'manageSession', component: ManageSessionComponent}
   ]},
   // pas 404

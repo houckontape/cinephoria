@@ -1,0 +1,25 @@
+<p>manage-movies works!</p>
+<hr>
+<form [formGroup]="MovieForm">
+  <label>Titre du film</label><br>
+  <input id='title' type="text" formControlName="title"><br>
+  <label>Synopsis</label><br>
+  <input id='synopsis' type="text-area" formControlName="synopsis"><br>
+  <label>Affiche</label><br>
+  <input id='poster' type="text" formControlName="poster"><br>
+  <label>genre</label><br>
+  <input id='genre' type="text" formControlName="genre"><br>
+  <label>note</label><br>
+  <input id='note' type="text" formControlName="note"><br>
+  <label>Nous aimons</label><br>
+  <input id='love' type="checkbox" formControlName="love"><br>
+  <label>duree</label><br>
+  <input id='duration' type="text" formControlName="duration"><br>
+  <hr>
+  <button type="button" (click)="addMovie()">ajouter le film</button>
+</form>
+
+
+
+
+
